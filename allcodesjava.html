@@ -20,18 +20,23 @@ Note
 ----------------------------------------------------------------------------------------------------------------
 
 import java.util.*;
-public class Leapyear
-{
-public static void main(String[] args){
-    System.out.print("enter year:  ");
-Scanner sc=new Scanner(System.in);
-int year=sc.nextInt();
-if(year%400==0 || (year%4==0 && (year%100 !=0))){
-    System.out.print("Year is a:"+ year+"which is a leap year");
+
+public class Leapyear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter year: ");
+        int year = sc.nextInt();
+
+        if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+            System.out.println("Year " + year + " is a leap year");
+        } else {
+            System.out.println("Year " + year + " is not a leap year");
+        }
+
+        sc.close(); // good practice
+    }
 }
-else{
-    System.out.print("year is not aleap year");
-}}}
 ---------------------------------------------------
 
         
